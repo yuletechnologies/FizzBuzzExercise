@@ -1,5 +1,16 @@
 925cf7f189d1e404cfd55df6e8398d831df0f45a
 
+Release Notes Version 1.1
+
+  - Backward compatible with version 1.0
+  - Deprecating default constructor for FizzBuzzGame() that do not produce the lucky number
+  - To use the game with the lucky number:
+
+    ResultCalculator theFallbackResultCalculator =  new BasicResultCalculator();
+    LuckyNumberResultCalculator luckyNumberResultCalculator = new LuckyNumberResultCalculator(theFallbackResultCalculator);
+    new FizzBuzzGame(luckyNumberResultCalculator).play(1,20)
+
+
 Release Notes Version 1.0
 
   - Usage:

@@ -40,6 +40,6 @@ public class FizzBuzzGameTest {
     public void playGameProducesExceptionForInvertedRange() {
         Assertions.assertThatThrownBy(() -> fizzBuzzGameUnderTest.play(20, 1)).
                 isInstanceOf(IllegalArgumentException.class).
-                hasMessageContaining("Invalid Range. Provide a positive range of Integers.");
+                hasMessageContaining("Invalid Range. Provide a valid range of Integers.");
     }
 }
