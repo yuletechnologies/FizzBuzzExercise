@@ -1,5 +1,17 @@
 925cf7f189d1e404cfd55df6e8398d831df0f45a
 
+Release Notes Version 1.2
+
+  - Backward compatible with version 1.0 and 1.1
+  - To use the game with the lucky reporting:
+
+    ResultCalculator theFallbackResultCalculator =  new BasicResultCalculator();
+    LuckyNumberResultCalculator luckyNumberResultCalculator = new LuckyNumberResultCalculator(theFallbackResultCalculator);
+    FizzBuzzReporter fizzBuzzReporter = new FizzBuzzReporter();
+
+    new FizzBuzzGame(luckyNumberResultCalculator, fizzBuzzReporter).play(1,20)
+  - If no FizzBuzzReporter is given to the FizzBuzzGame, it will work without reporting
+
 Release Notes Version 1.1
 
   - Backward compatible with version 1.0
